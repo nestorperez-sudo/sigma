@@ -1,3 +1,1 @@
-<title>
-    Hola
-</title>
+Hello, World!
