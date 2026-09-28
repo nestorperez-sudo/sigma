@@ -1,9 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>First class</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Flow</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1 style="text-align: center;">Hello, World!</h1>
+    <div class="page">
+        <aside>
+            <nav>
+                <div class="sidebar-logo">
+                    <a href="#top"><span>S</span> Study Flow</a>
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+                <div class="workspace">Workspace</div>
+                <div class="navigation active">
+                    <i class="fa-solid fa-clock"></i>
+                    <a href="#today">Today</a>
+                </div>
+                <div class="navigation">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <a href="#schedule">Schedule</a>
+                </div>
+                <div class="navigation">
+                    <i class="fa-solid fa-list-check"></i>
+                    <a href="#tasks">Tasks</a>
+                </div>
+                <div class="navigation">
+                    <i class="fa-solid fa-book"></i>
+                    <a href="#courses">Courses</a>
+                </div>
+                <div class="navigation">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <a href="#statistcs">Statistics</a>
+                </div>
+            </nav>
+            <footer>
+                <a href="login.index">Want to log out?</a>
+                <small>Student Account</small>
+            </footer>
+        </aside>
+        <div class="content" id="top">
+            <header>
+                <p class="current-date">Thursday, 21 October</p>
+                <div class="header-right-side">
+                    <form>
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input class="search-bar-input" type="search" placeholder="Search tasks, courses...">
+                        </div>
+                    </form>
+                    <p class="alert-row">
+                        <span>Alerts</span>
+                        <span class="red-circle-alert" aria-label="New alerts"></span>
+                    </p>
+                    <button class="add-task-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add task
+                    </button>
+                </div>
+            </header>
+            <main>
+                <div class="welcome-section">
+                    <h1>Hello, Alex<span class="dot" style="color: var(--gold);">.</span></h1>
+                    <div class="date-block">
+                        <div style="height: fit-content;">
+                            <span class="day-number">10</span>
+                            <span class="month">SEP</span>
+                        </div>
+                        <span class="year">2026</span>
+                    </div>
+                </div>
+                <div class="coming-up">
+                    <h1>Coming up</h1>
+                    <button class="items-plan">4 items to plan</button>
+                </div>
+                <section class="coming-up-dashboard">
+                    <article class="card">
+                        <div class="card-header">
+                            <span>Today · Tue, Sep 10</span>
+                            <span class="count">2 items</span>
+                        </div>
+                        
+                        <div class="card-body">
+                            <h3>EX Calculus II midterm</h3>
+                            <p>Monday, September 16</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-header">
+                            <span>Tomorrow · Wed, Sep 11</span>
+                            <span class="count">2 items</span>
+                        </div>
+
+                        <div class="card-body">
+                            <h3>EX Calculus II midterm</h3>
+                            <p>Monday, September 16</p>
+                        </div>
+                    </article>
+
+                    <article class="card study-reminder">
+                        <div class="card-header">
+                            <span style="color: var(--gold);">Study reminder</span>
+                            <span class="count">Exam in 6 days</span>
+                        </div>
+
+                        <div class="card-body">
+                            <h3>EX Calculus II midterm</h3>
+                            <p>Monday, September 16</p>
+                        </div>
+                    </article>
+                </section>
+                <section class="general-info">
+                    <article class="card schedule">
+                        <div class="card-header">
+                            <span class="card-title">Schedule</span>
+                            <span class="count">2 items</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-header">
+                            <span class="card-title">Priority tasks</span>
+                            <span class="count">2 items</span>
+                        </div>
+                    </article>
+
+                    <article class="card calendar">
+                        <div class="card-header">
+                            <span class="card-title">September 2026</span>
+                            <span class="count">September</span>
+                        </div>
+                    </article>
+
+                    <article class="card courses">
+                        <div class="card-header">
+                            <span class="card-title">Your courses</span>
+                            <span class="count">Manage courses</span>
+                        </div>
+                    </article>
+
+                    <article class="card statistics">
+                        <div class="card-header">
+                            <span class="card-title">Weekly statistics</span>
+                            <span class="count">Manage courses</span>
+                        </div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
