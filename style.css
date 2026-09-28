@@ -1,0 +1,275 @@
+:root {
+    --navy: #112b46;
+    --cream: #f7f5ef;
+    --white: #ffffff;
+    --gold: #c7a35a;
+    --text: #172b3d;
+    --gray: #71808c;
+    --line: #e5e8e7;
+    --red: #c9776a;
+    --blue: #527b9e;
+    --green: #84b9a0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--cream);
+    color: var(--text);
+    font: 12px/1.5 "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    min-height: 100vh;
+}
+
+button {
+    background-color: var(--navy);
+    color: var(--cream);
+    border: none;
+    padding: 8px 17px;
+    cursor: pointer;
+    transition: transfrom 0.2s;
+    height: fit-content;
+
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+/* SIDEBAR */
+aside {
+    min-height: 100vh;
+    background-color: var(--navy);
+    color: var(--line);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    padding: 25px;
+    margin: 0;
+    color: var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sidebar-logo > i {
+    font-size: 12px;
+}
+
+.sidebar-logo span {
+    background-color: var(--gold);
+    color: var(--navy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.workspace {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.navigation {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+}
+
+.navigation:hover, .navigation.active {
+    background-color: rgba(162, 162, 162, 0.1);
+    color: var(--white);
+    border-left: 2px solid var(--gold);
+}
+
+footer {
+    margin: auto 0 10px 25px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.search-bar {
+    width: max-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    gap: 10px;
+}
+
+.search-bar:focus-within {
+    border: 2px solid var(--gold);
+}
+
+.search-bar i {
+    color: var(--navy);
+}
+
+.search-bar-input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.search-bar-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.header-right-side {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.add-task-btn i{
+    color: var(--gold);
+    margin-right: 7px;
+}
+
+.alert-row {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+}
+
+.red-circle-alert {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: var(--red);
+}
+
+/* WELCOME SECTION */
+
+main {
+    padding: 25px;
+    height: 100vh;
+    
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-section h1 {
+    font-size: 2.8rem;
+}   
+
+.day-number {
+    font-size: 2.6rem;
+    margin-bottom: 0;
+}
+
+/* COMING UP*/
+.coming-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items-plan {
+    background-color: var(--green);
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* COMING UP DASHOBARD*/
+.coming-up-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.card {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow:
+    0 1px 0 rgba(17, 43, 70, 0.04),
+    0 8px 20px rgba(17, 43, 70, 0.06);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--line);
+}
+
+.study-reminder {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+/* GENERAL INFO */
+
+.general-info {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 10px;
+}
+
+.calendar, .statistics, .courses {
+    grid-column: 1/-1;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
