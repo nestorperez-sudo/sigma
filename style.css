@@ -17,12 +17,13 @@
 
 html {
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 body {
     margin: 0;
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     background: var(--cream);
     color: var(--text);
     font: 12px/1.5 "Poppins", sans-serif;
@@ -301,8 +302,6 @@ header {
 
 main {
     padding: 25px;
-    height: 100vh;
-    
 }
 
 .welcome-section {
@@ -379,4 +378,64 @@ main {
 .card-title {
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+@media(max-width: 856px) {
+    .coming-up-dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .study-reminder {
+        grid-column: 1/-1;
+    }
+
+    header {
+        justify-content: flex-end;
+    }
+
+    .current-date {
+        display: none;
+    }
+
+    .general-info {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media(max-width: 756px) {
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    aside {
+        grid-row: 2;
+        width: 100%;
+        min-height: 0;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .sidebar-logo {
+        display: none;
+    }
+
+    .workspace {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media(max-width: 462px) {
+
 }
